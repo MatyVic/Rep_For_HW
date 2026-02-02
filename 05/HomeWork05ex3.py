@@ -1,4 +1,6 @@
 # 5.3. hashtag
+# Користувач вводить рядок, Ваше завдання – перетворити рядок на hashtag.
+
 import string
 
 while True:
