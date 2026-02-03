@@ -17,6 +17,5 @@ while True:
 
     call_check = input("Хочете продовжити роботу?"
                        " (введіть y/yes) ").lower().strip()
-    if not call_check in ("y", "yes"):
+    if call_check not in ("y", "yes"):
         break
-

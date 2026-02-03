@@ -7,33 +7,32 @@ while True:
     variable_string = input("Введіть ім'я змінної для перевірки ")
 
     text_of_error = ("У назві для змінної {0} виявлена помилка.\n"
-                     "Не можна використовувати {1} "
-                     "для визначення імені змінної."
+                     "Не можна {1} для визначення імені змінної."
                      "Повторіть спробу ще раз!\n")
 
     if not variable_string[0].isdigit():
         if not k.iskeyword(variable_string) and variable_string.isidentifier():
             if any(symb.isupper() for symb in variable_string):
-                error_det = "літери в UpperCase"
+                error_det = "використовувати літери в UpperCase"
                 print(variable_string + " False\n")
                 print(text_of_error.format(variable_string, error_det))
             elif set(variable_string) == {"_"} and len(variable_string) > 1:
-                error_det = "використувати тільки _ "
+                error_det = "використовувати тільки _ "
                 print(variable_string + " False\n")
                 print(text_of_error.format(variable_string, error_det))
             else:
                 print(variable_string + " True")
         else:
-            error_det = ("не можна використовувати зарезервовані"
+            error_det = ("використовувати зарезервовані"
                          " або заборонені символи у назві")
             print(variable_string + " False\n")
             print(text_of_error.format(variable_string, error_det))
     else:
-        error_det = "числа на початку назви"
+        error_det = "використовувати числа на початку назви"
         print(variable_string + " False\n")
         print(text_of_error.format(variable_string, error_det))
 
     call_check = input("Хочете продовжити роботу?"
                        " (введіть y/yes) ").lower().strip()
-    if not call_check in ("y", "yes"):
-           break
+    if call_check not in ("y", "yes"):
+        break
