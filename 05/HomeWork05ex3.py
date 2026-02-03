@@ -4,21 +4,19 @@
 import string
 
 while True:
-    str_to_hashtag = input("Введіть фразу для перетворення ")
+    str_to_hashtag = input("Введіть фразу для перетворення ").title()
     new_str = ""
 
     for ch in str_to_hashtag:
-        if ch in string.punctuation:
+        if ch in string.punctuation or ch == " ":
             ch = ""
         else:
             new_str += ch
 
-    print("#" + new_str[:140].title().replace(" ", ""))
+    print("#" + new_str[:139])
 
     call_check = input("Хочете продовжити роботу?"
                        " (введіть y/yes) ").lower().strip()
-    if call_check in ("y", "yes"):
-        continue
-    else:
+    if not call_check in ("y", "yes"):
         break
 
