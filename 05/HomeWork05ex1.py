@@ -17,8 +17,8 @@ while True:
                 error_det = "літери в UpperCase"
                 print(variable_string + " False\n")
                 print(text_of_error.format(variable_string, error_det))
-            elif "__" in variable_string:
-                error_det = "використувати більше одного _ підряд"
+            elif set(variable_string) == {"_"} and len(variable_string) > 1:
+                error_det = "використувати тільки _ "
                 print(variable_string + " False\n")
                 print(text_of_error.format(variable_string, error_det))
             else:
@@ -35,7 +35,5 @@ while True:
 
     call_check = input("Хочете продовжити роботу?"
                        " (введіть y/yes) ").lower().strip()
-    if call_check in ("y", "yes"):
-        continue
-    else:
-        break
+    if not call_check in ("y", "yes"):
+           break
