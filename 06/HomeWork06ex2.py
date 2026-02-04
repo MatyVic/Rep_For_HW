@@ -24,4 +24,4 @@ while exit_check in ["y", "yes", "т", "так"]:
 
     else:
         print("Велике число")
-    exit_check = input("Продовжити? (y/ yes/т/так) ").lower()
+    exit_check = input("Продовжити? (y/yes/т/так) ").lower()

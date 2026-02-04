@@ -12,4 +12,4 @@ while exit_check in ["y", "yes", "т", "так"]:
         my_num = res
 
     print(my_num)
-    exit_check = input("Продовжити? (y/ yes/т/так) ").lower()
+    exit_check = input("Продовжити? (y/yes/т/так) ").lower()
