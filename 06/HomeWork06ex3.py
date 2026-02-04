@@ -13,3 +13,9 @@ while exit_check in ["y", "yes", "т", "так"]:
 
     print(my_num)
     exit_check = input("Продовжити? (y/yes/т/так) ").lower()
+
+
+    ind_1 = string.ascii_letters.index(my_str[0])
+    ind_2 = string.ascii_letters.index(my_str[-1])
+
+    #print(string.ascii_letters[ind_1:ind_2 + 1])
