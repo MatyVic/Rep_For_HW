@@ -1,7 +1,7 @@
 # 6.2. Конвертер із числа в дату
 
-exit_cheker = "y"
-while exit_cheker in ["y", "yes", "т", "так"]:
+exit_check = "y"
+while exit_check in ["y", "yes", "т", "так"]:
     time_in_sec = int(input("Введіть секунди для розрахунку: ").strip())
 
     first_rule = (2, 3, 4)
@@ -24,4 +24,4 @@ while exit_cheker in ["y", "yes", "т", "так"]:
 
     else:
         print("Велике число")
-    exit_cheker = input("Продовжити? (y/ yes/т/так) ").lower()
+    exit_check = input("Продовжити? (y/ yes/т/так) ").lower()
