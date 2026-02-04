@@ -10,7 +10,7 @@ while exit_check in ["y", "yes", "т", "так"]:
     fist_asc = ord(my_str[0])
     last_asc = ord(my_str[1])
 
-    start, end = sorted([fist_asc , last_asc])
+    start, end = sorted([fist_asc, last_asc])
     for asc in range(start, end + 1):
         if chr(asc) not in string.punctuation:
             result += chr(asc)
