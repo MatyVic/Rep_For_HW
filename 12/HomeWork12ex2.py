@@ -7,7 +7,7 @@ class Item:
         self.name = name
 
     def __str__(self):
-        return f"{self.name}, price: {self.price}\n"
+        return(f"{self.name}, price: {self.price}")
 
 class User:
 
@@ -17,7 +17,7 @@ class User:
         self.numberphone = numberphone
 
     def __str__(self):
-       return f"User:{self.name} {self.surname}\n "
+        return f"User: {self.name} {self.surname}"
 
 class Purchase:
     def __init__(self, user):
@@ -29,11 +29,17 @@ class Purchase:
         self.products[item] = cnt
 
     def __str__(self):
+        res = f"User: {self.user.name} {self.user.surname}\nItems:\n"
+        for item, cnt in self.products.items():
+            res += f"{item.name}: {cnt} pcs.\n"
+        return res
 
-         return f"User: {self.user.name} {self.user.surname}\n Items:"
 
     def get_total(self):
-        pass
+        self.total = 0
+        for item, cnt in self.products.items():
+            self.total += cnt * item.price
+        return self.total
 
 lemon = Item('lemon', 5, "yellow", "small", )
 apple = Item('apple', 2, "red", "middle", )
@@ -65,3 +71,5 @@ apple: 10 pcs.
 """
 
 assert cart.get_total() == 40
+
+print('OK')
