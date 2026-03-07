@@ -59,7 +59,8 @@ gr = Group('PD1')
 try:
     # додаємо 10 студентів
     for i in range(12):
-        gr.add_student(Student('Male', 20+i, f'Name{i}', f'Last{i}', f'RB{i}'))
+        gr.add_student(Student('Male', 20+i, f'Name{i}',
+                               f'Last{i}', f'RB{i}'))
     print("10 студентів додано успішно")
 except TooManyStudents as e:
     print("Помилка:", e)
