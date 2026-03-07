@@ -1,6 +1,7 @@
-# ДЗ 14.2. Створення власних модулі
+# ДЗ 14.2. Створення власних модулів
 
-from dir_01.module import *
+from dir_01.Student import Student
+from dir_01.Group import Group
 
 
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
@@ -11,6 +12,9 @@ gr.add_student(st2)
 print(gr)
 assert gr.find_student('Jobs') == st1  # 'Steve Jobs'
 assert gr.find_student('Jobs2') is None
+print(st1 == st2)
+
+st3 = Student('Female', 25, 'Mona', 'Liza', 'AN132')
 
 gr.delete_student('Taylor')
 print(gr) # Only one student
