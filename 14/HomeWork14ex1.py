@@ -1,6 +1,6 @@
 # ДЗ 14.1. Виняток користувача
 class TooManyStudents(Exception):
-    def __init__(self, msg = "Maximum number of students can't be more then 10"):
+    def __init__(self, msg="Maximum number of students is 10"):
         super().__init__(msg)
 
 
