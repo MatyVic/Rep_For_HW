@@ -26,6 +26,7 @@ class Fraction:
     def __str__(self):
         return f"Fraction: {self.a}, {self.b}"
 
+
 f_a = Fraction(2, 3)
 f_b = Fraction(3, 6)
 f_c = f_b + f_a
